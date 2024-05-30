@@ -11,14 +11,15 @@ namespace k1
             Console.WriteLine("Enter perimeter of triangle");
 
             double p = Double.Parse(Console.ReadLine());
-
-            double s = Math.Sqrt((p / 2 * Math.Pow(p / 2 - p / 3, 3)));
-
-            Console.WriteLine("Length \t Square");
-
-            Console.WriteLine($"{p/3:0.00} \t {s:0.00}");
-
             
+            double a = p / 3;
+            double b = p / 3;
+            double c = p / 3;
+
+            double s = Math.Sqrt(p/2 * (p/2 - a) * (p/2 - b) * (p/2 - c));
+            
+            Console.WriteLine("Length \t Square");
+            Console.WriteLine($"{p/3:0.00} \t {s:0.00}");         
 
 
 
