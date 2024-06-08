@@ -13,7 +13,7 @@ namespace pppppppp
     }
 
 
-    class User : IGetGUID
+    abstract class User 
     {
         protected string name;
 
@@ -23,10 +23,6 @@ namespace pppppppp
             this.name = name;
         }
         public string ReturnName() => name;
-        public void GetGUID() 
-        {
-            Console.WriteLine(Guid.NewGuid().ToString());
-        }
         
 
 
@@ -39,7 +35,7 @@ namespace pppppppp
     /// </summary>
 
 
-    class Player : User
+    class Player : User, IGetGUID
     {
 
         
@@ -75,6 +71,11 @@ namespace pppppppp
 
 
         }
+        public void GetGUID()
+        {
+            Console.WriteLine(Guid.NewGuid().ToString());
+        }
+
 
     }
 
